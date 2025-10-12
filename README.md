@@ -191,7 +191,8 @@ The `FareConfig` class:
 git clone https://github.com/yourusername/OnlineBusTicketingSystem.git
 ```
 
-2️⃣ Install MySQL Server
+### 2️⃣ Install MySQL Server
+
 Download and install MySQL Server from MySQL Downloads.
 
 Create a new database (e.g., bus_ticketing_db).
@@ -201,7 +202,8 @@ Import the provided SQL schema (if available).
 🧩 Note:
 The MySQL JDBC driver (mysql-connector-j-9.3.0.jar) is already included inside the project’s /lib folder — you do not need to download it separately.
 
-3️⃣ Configure Database Connection
+### 3️⃣ Configure Database Connection
+
 Update your database credentials in your configuration file (e.g., web.xml or DBConnection.java):
 
 ```xml
@@ -220,7 +222,8 @@ Copy code
 </context-param>
 ```
 
-4️⃣ Install Apache Tomcat
+### 4️⃣ Install Apache Tomcat
+
 Download Apache Tomcat (version 10.x or later) from Tomcat Downloads.
 
 Add it to your IDE:
@@ -229,17 +232,20 @@ In Eclipse → Window → Preferences → Server → Runtime Environments → Ad
 
 In IntelliJ IDEA → File → Settings → Build, Execution, Deployment → Application Servers → Add Tomcat Server.
 
-5️⃣ Deploy the Application
+### 5️⃣ Deploy the Application
+
 Deploy the .war file to Tomcat or run directly from your IDE.
 
 Start the server.
 
-6️⃣ Access the Application
+### 6️⃣ Access the Application
+
 Passenger Interface → http://localhost:8080/BusTicketingSystem/
 
 Admin Interface → http://localhost:8080/BusTicketingSystem/admin
 
-🧾 Reporting Features
+## 🧾 Reporting Features
+
 Total tickets sold by date range
 
 Revenue per day/week/month
@@ -248,7 +254,8 @@ Ticket sales by category or type
 
 Admin dashboard view
 
-⚠️ Business Logic Rules
+## ⚠️ Business Logic Rules
+
 Evening fares apply only to One-Trip tickets after 7 PM.
 
 Total discount cannot exceed 50%.
@@ -257,10 +264,7 @@ City and Inter-City tickets are purchased separately.
 
 Seat overbooking is prevented using thread synchronization.
 
-📅 Project Details
-Course Project Type: Group (3–4 students)
-
-Deadline: May 24th, 2025
+## 📅 Project Details
 
 Technology Stack: Java MVC, JSP, Servlets, MySQL
 
