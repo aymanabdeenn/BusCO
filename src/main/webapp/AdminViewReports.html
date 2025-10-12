@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>BusCo</title>
+<link rel="stylesheet" href="styles/styleViewReports.css">
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+<div class="topBar">
+      <img
+        src="Images/BusCoDark.png"
+        alt="logo"
+        class="logo"
+        draggable="false"
+      />
+</div>	
+<div class="bigContainer">
+	<div class="container">
+   		<h2>Show the purchased tickets by</h2>
+   		<div class="choices">
+   			<div class="sec">
+   				<button class="btn rangeBtn">Date Range</button>
+     			<form action="filteredTickets" method="GET" class="rangeForm form hidden">
+       				<input type="hidden" value="dateRange" name="filter"/>
+       				<label>Start Date:</label>
+       				<input type="date" name="start"/>
+       				<label>End Date:</label>
+       				<input type="date" name="end"/>
+	   				<input type="submit" value="Show" name="show" class="submit"/>
+    		    </form>
+   			</div>
+     
+    	    <div class="sec">
+   				<button class="btn ticketBtn">TicketType</button>
+     			<form action="filteredTickets" method="GET" class="ticketForm form hidden">
+       				<input type="hidden" value="ticketType" name="filter"/>
+       				<label>Ticket Type:</label>
+       				<select name="ticketType">
+       					<option value="one trip">One Trip</option>
+       					<option value="daily pass">Daily Pass</option>
+       					<option value="weekly pass">Weekly Pass</option>
+       					<option value="monthly pass">Monthly Pass</option>
+       				</select>
+	   				<input type="submit" value="Show" name="show" class="submit"/>
+    		     </form>
+   			 </div>
+    		 <div class="sec">
+   				<button class="btn userBtn">User Category</button>
+     			<form action="filteredTickets" method="GET" class="userForm form hidden">
+       				<input type="hidden" value="userCategory" name="filter"/>
+       				<label>User Category:</label>
+       				<select name="userCategory">
+       					<option value="regular">Regular</option>
+       					<option value="student">Student</option>
+       					<option value="senior">Senior</option>
+       				</select>
+	   				<input type="submit" value="Show" name="show" class="submit"/>
+     			</form>
+   			 </div>
+   		 </div>
+	</div>
+	
+	<div class="container2">
+		<h2>Show the revenue within</h2>
+		<div class="choices">
+     		<form action="getRevenue" method="GET">
+       			<input type="hidden" value="day" name="revenue"/>
+	   			<input type="submit" value="Day" name="type" class="btn"/>
+   		    </form>
+   
+     		<form action="getRevenue" method="GET">
+       			<input type="hidden" value="week" name="revenue"/>
+	   			<input type="submit" value="Week" name="type" class="btn"/>
+     		</form>
+  
+     		<form action="getRevenue" method="GET">
+       			<input type="hidden" value="month" name="revenue"/>
+	   			<input type="submit" value="Month" name="type" class="btn"/>
+     		</form>
+   		</div>
+	</div>
+</div>
+
+
+ <div class="footer">
+      <div class="footerText">
+        <p>BusCo &copy; 2025  || All rights reserved</p>
+      </div>
+      <form action="logout" method="GET" >
+      	<input type="submit" value="LogOut" name="logOut" id="logout"/>
+      </form>
+ </div>
+ <script src="scripts/scriptViewReports.js"></script>
+</body>
+</html>

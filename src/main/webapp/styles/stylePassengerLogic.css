@@ -1,0 +1,140 @@
+:root {
+  --main-color: #f0f0f1;
+  --secondary-color: #000000;
+  --tertiary-color: #50575e;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+
+  font-family: "Lora" , serif;
+
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.topBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  background-color: #000000;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  background-color: var(--tertiary-color);
+}
+
+#logout {
+	width: 100px;
+	height: 40px;
+	border-radius: 10px;
+	background-color: var(--main-color);
+	color: var(--secondary-color);
+	font-size: 15px;
+	font-style: italic;
+	float: right;
+	margin-right: 15px;
+	
+	font-family: "Lora" , serif;
+}
+
+.choiceBtns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+  gap: 15%;
+  background-color: var(--tertiary-color);
+  
+  font-family: "Lora" , serif;
+
+}
+
+
+.choiceBtn {
+  height: 30px;
+  width: 250px;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+  font-size: 1rem;
+  font-style: italic;
+  
+  font-family: "Lora" , serif;
+}
+
+.introText {
+  color: #000000;
+  margin-top: 15%;
+}
+
+.bookingForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+  margin-top: 50px;
+ 
+}
+
+.bookingForm input,
+.bookingForm select {
+  height: 30px;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-style: italic;
+  border: 2px solid var(--secondary-color);
+  margin-bottom: 30px;
+}
+
+label {
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  
+}
+
+#search {
+  background-color: var(--tertiary-color);
+  color: var(--main-color);
+  font-size: 1rem;
+  font-style: italic;
+  border: none;
+  margin-top: 5px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--secondary-color);
+  color: var(--main-color);
+  margin: 0;
+  padding: 0;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

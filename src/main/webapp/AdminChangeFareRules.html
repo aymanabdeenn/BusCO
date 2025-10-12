@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>BusCo</title>
+<link rel="stylesheet" href="styles/styleChangeFareRules.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+<div class="topBar">
+      <img
+        src="Images/BusCoDark.png"
+        alt="logo"
+        class="logo"
+        draggable="false"
+      />
+ </div>
+ 
+ <h1 class="text">Choose your Fare/Discount for change</h1>
+ 
+ <div class="choices">
+ 	<div class="citySec">
+ 		<button class="btn city">City Fare</button>
+ 		<form action="changeFareRules" method="POST" class="cityForm form hidden">
+ 			<label>New City Fare:</label>
+ 			<input type="hidden" value="city" name="fareType"/>
+ 			<input type="text" name="newFare"/>
+ 			<input type="submit" value="Change" name="change" class="change"/>
+ 		</form> 
+ 	</div>
+ 	<div class="innerCitySec">
+ 		<button class="btn innerCity">Inner-City Fare</button>
+ 		<form action="changeFareRules" method="POST" class="innerCityForm form hidden">
+ 			<label>New Inner-City Fare:</label>
+ 			<input type="hidden" value="innerCity" name="fareType"/>
+ 			<input type="text" name="newFare"/>
+ 			<input type="submit" value="Change" name="change" class="change"/>
+ 		</form> 
+ 	</div>
+ 	<div class="oneTripSec">
+ 		<button class="btn oneTrip">One-Trip Fare</button>
+ 		<form action="changeFareRules" method="POST" class="oneTripForm form hidden">
+ 			<label>New One-Trip Fare:</label>
+ 			<input type="hidden" value="oneTrip" name="fareType"/>
+ 			<input type="text" name="newFare"/>
+ 			<input type="submit" value="Change" name="change" class="change"/>
+ 		</form> 
+ 	</div>
+ 	<div class="dailySec">
+ 		<button class="btn daily">Daily-Pass Fare</button>
+ 		<form action="changeFareRules" method="POST" class="dailyForm form hidden">
+ 			<label>New Daily-Pass Fare:</label>
+ 			<input type="hidden" value="daily" name="fareType"/>
+ 			<input type="text" name="newFare"/>
+ 			<input type="submit" value="Change" name="change" class="change"/>
+ 		</form> 
+ 	</div>
+ 	<div class="weeklySec">
+ 		<button class="btn weekly">Weekly-Pass Fare</button>
+ 		<form action="changeFareRules" method="POST" class="weeklyForm form hidden">
+ 			<label>New Weekly-Pass Fare:</label>
+ 			<input type="hidden" value="weekly" name="fareType"/>
+ 			<input type="text" name="newFare"/>
+ 			<input type="submit" value="Change" name="change" class="change"/>
+ 		</form> 
+ 	</div>
+ 	<div class="monthlySec">
+ 		<button class="btn monthly">Monthly-Pass Fare</button>
+ 		<form action="changeFareRules" method="POST" class="monthlyForm form hidden">
+ 			<label>New Monthly-Pass Fare:</label>
+ 			<input type="hidden" value="monthly" name="fareType"/>
+ 			<input type="text" name="newFare"/>
+ 			<input type="submit" value="Change" name="change" class="change"/>
+ 		</form> 
+ 	</div>
+ 	<div class="regularSec">
+ 		<button class="btn regular">Regular Discount</button>
+ 		<form action="changeFareRules" method="POST" class="regularForm form hidden">
+ 			<label>New Regular Discount:</label>
+ 			<input type="hidden" value="regular" name="fareType"/>
+ 			<input type="text" name="newFare"/>
+ 			<input type="submit" value="Change" name="change" class="change"/>
+ 		</form> 
+ 	</div>
+ 	<div class="studentSec">
+ 		<button class="btn student">Student Discount</button>
+ 		<form action="changeFareRules" method="POST" class="studentForm form hidden">
+ 			<label>New Student Discount:</label>
+ 			<input type="hidden" value="student" name="fareType"/>
+ 			<input type="text" name="newFare"/>
+ 			<input type="submit" value="Change" name="change" class="change"/>
+ 		</form> 
+ 	</div>
+ 	<div class="seniorSec">
+ 		<button class="btn senior">Senior Discount</button>
+ 		<form action="changeFareRules" method="POST" class="seniorForm form hidden">
+ 			<label>New Senior Discount:</label>
+ 			<input type="hidden" value="senior" name="fareType"/>
+ 			<input type="text" name="newFare"/>
+ 			<input type="submit" value="Change" name="change" class="change"/>
+ 		</form> 
+ 	</div>
+ 	<div class="eveningSec">
+ 		<button class="btn evening">Evening/oneTrip Discount</button>
+ 		<form action="changeFareRules" method="POST" class="eveningForm form hidden">
+ 			<label>New Evening/One-Trip Discount:</label>
+ 			<input type="hidden" value="evening" name="fareType"/>
+ 			<input type="text" name="newFare"/>
+ 			<input type="submit" value="Change" name="change" class="change"/>
+ 		</form> 
+ 	</div>
+ </div>
+ 
+ 
+ <div class="footer">
+      <div class="footerText">
+        <p>BusCo &copy; 2025  || All rights reserved</p>
+      </div>
+      <form action="logout" method="GET" >
+      	<input type="submit" value="LogOut" name="logOut" id="logout"/>
+      </form>
+ </div>
+ 
+ <script src="scripts/scriptChangeFare.js"></script>
+</body>
+</html>

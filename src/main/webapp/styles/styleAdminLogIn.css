@@ -1,0 +1,129 @@
+:root {
+  --main-color: #f0f0f1;
+  --secondary-color: #000000;
+  --tertiary-color: #50575e;
+}
+
+body {
+  box-sizing: border-box;
+  background-color: var(--main-color);
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+
+  gap: 15%;
+}
+
+h2 {
+  color: var(--main-color);
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.5rem;
+
+  width: 75%;
+  text-align: center;
+  padding: 15px;
+  border: 2px solid var(--main-color);
+  border-radius: 10px;
+}
+
+p {
+  color: var(--main-color);
+}
+
+.loginArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 30%;
+  height: 80%;
+
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+}
+
+form {
+  margin-top: 15%;
+}
+
+input {
+  width: 100%;
+  height: 25px;
+  border-radius: 5px;
+  border: none;
+  padding-left: 10px;
+  margin-bottom: 5px;
+}
+
+label {
+  color: var(--main-color);
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 25px;
+
+  background-color: var(--main-color);
+  border-radius: 10px;
+
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 1rem;
+}
+
+/* ------------------link styling------------------------------ */
+a {
+  text-decoration: none;
+  color: blue;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:active {
+  text-decoration: underline;
+  color: var(--main-color);
+}
+
+/* ------------------link styling------------------------------ */
+
+/* ------------------footer section----------------------------  */
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--secondary-color);
+  color: var(--main-color);
+  margin: 0;
+  padding: 0;
+}
+
+/* ------------------end of footer section----------------------------  */

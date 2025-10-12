@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BusCo</title>
+    <link rel="stylesheet" href="styles/stylePassengerLogic.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <style></style>
+  </head>
+  <body>
+     <div class="topBar">
+      <img
+        src="Images/BusCoDark.png"
+        alt="logo"
+        class="logo"
+        draggable="false"
+      />
+    </div>
+    <div class="choiceBtns">
+       <button class="bookTicket choiceBtn">Book a ticket</button>
+       <form action="viewTripsHistory.jsp" method="POST" class="viewHistoryForm">
+         <input type="submit" value="View purchased tickets history" class="viewTickets choiceBtn" />
+       </form>
+       
+    </div>
+      <!-- introText -->
+      <h1 class="introText">Let's get started. Book your ticket now!</h1>
+      <!-- introText -->
+      <!-- Booking Section -->
+      <div class="bookingSection hidden">
+        <form action="searchTrips" method="POST" class="bookingForm" >
+          <label>Origin:</label>
+          <input type="text" id="origin" name="origin" required />
+          <label>Destination:</label>
+          <input type="text" id="destination" name="destination" required />
+          <label>Travel Type:</label>
+          <select id="travelTypes" name="choices">
+            <option value="city">City</option>
+            <option value="innerCity">Inner City</option>
+          </select>
+          <label>Date:</label>
+          <input type="date" id="date" name="date" required />
+          <input type="submit" value="Search" id="search"></input>
+        </form>
+      </div>
+      <!-- Booking Section -->
+      <div class="footer">
+      <div class="footerText">
+        <p>BusCo &copy; 2025  || All rights reserved</p>
+      </div>
+      <form action="logout" method="GET" >
+      	<input type="submit" value="LogOut" name="logOut" id="logout"/>
+      </form>
+    </div>
+    <script src="scripts/scriptPassengerLogic.js"></script>
+  </body>
+</html>

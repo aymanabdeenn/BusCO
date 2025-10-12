@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BusCo</title>
+    <link href="styles/styleAdminLogIn.css" rel="stylesheet" />
+  </head>
+  <body>
+    <img
+      src="Images/BusCoDark.png"
+      alt="BusCo Logo"
+      class="logo"
+      width="250px"
+      height="250px"
+      draggable="false"
+    />
+    <div class="loginArea">
+      <h2>Admin Login</h2>
+      <form action="logInUser" method="post">
+        <label for="username">Username:</label><br />
+        <input type="text" id="username" name="username" /><br /><br />
+        <label for="password">Password:</label><br />
+        <input type="password" id="password" name="password" /><br /><br />
+        <input type="hidden" id="type" name="type" value="admin"/>
+        <input type="submit" value="Login" class="login" />
+      </form>
+    </div>
+    <div class="footer">
+      <div class="footerText">
+        <p>BusCo &copy; 2025  || All rights reserved</p>
+      </div>
+    </div>
+  </body>
+</html>

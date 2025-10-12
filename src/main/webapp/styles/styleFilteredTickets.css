@@ -1,0 +1,94 @@
+@charset "UTF-8";
+:root {
+  --main-color: #f0f0f1;
+  --secondary-color: #000000;
+  --tertiary-color: #50575e;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+
+  font-family: "Lora", serif;
+
+  overflow: hidden;
+}
+
+.hidden {
+  display: none;
+}
+
+.topBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  background-color: #000000;
+}
+
+.logo {
+  width: 150px;
+  height: auto;
+  background-color: var(--tertiary-color);
+}
+
+.tickets {
+	width:60vw;
+	height: 50vh;
+	border: 2px solid var(--secondary-color);
+	margin-top: 100px;
+	border-radius: 10px;
+	
+	overflow-x: hidden;
+}
+
+.ele {
+	width: 100%;
+	border-bottom: 2px solid var(--secondary-color);
+	padding : 15px;
+	font-family: "Lora" , serif; 
+}
+
+.report{
+	margin-top: 25px;
+	font-family: "Lora" , serif;
+	font-size: 18px;
+}
+
+#logout {
+	width: 100px;
+	height: 40px;
+	border-radius: 10px;
+	background-color: var(--main-color);
+	color: var(--secondary-color);
+	font-size: 15px;
+	font-family: "Lora";
+	float: right;
+	
+	margin-right: 15px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--secondary-color);
+  color: var(--main-color);
+  margin: 0;
+  padding: 0;
+  
+  font-family: "Lora";
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
