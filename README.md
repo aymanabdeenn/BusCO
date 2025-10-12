@@ -16,6 +16,7 @@ This project emphasizes **clean architecture**, **object-oriented principles**, 
 ## 👥 User Roles
 
 ### 🧍 Passenger
+
 - Register and log in.
 - Search for available trips.
 - Estimate fares before purchase.
@@ -23,6 +24,7 @@ This project emphasizes **clean architecture**, **object-oriented principles**, 
 - View ticket purchase history.
 
 ### 👨‍💼 Admin
+
 - Add, update, and delete trips.
 - Configure fare rules (base fares and discounts).
 - View system reports (sales, revenue, tickets sold).
@@ -31,14 +33,15 @@ This project emphasizes **clean architecture**, **object-oriented principles**, 
 
 ## 🎟️ Ticket Types
 
-| Ticket Type | Description |
-|--------------|--------------|
-| One-Trip     | Single journey ticket |
+| Ticket Type  | Description                                    |
+| ------------ | ---------------------------------------------- |
+| One-Trip     | Single journey ticket                          |
 | Daily Pass   | Unlimited city/inter-city trips within one day |
-| Weekly Pass  | Unlimited trips within a week |
-| Monthly Pass | Unlimited trips within a month |
+| Weekly Pass  | Unlimited trips within a week                  |
+| Monthly Pass | Unlimited trips within a month                 |
 
 Each ticket can be issued for:
+
 - **City Travel**
 - **Inter-City Travel**
 
@@ -46,11 +49,11 @@ Each ticket can be issued for:
 
 ## 💰 Fare Categories
 
-| Category | Discount |
-|-----------|-----------|
-| Regular | No discount |
-| Student | 20% discount |
-| Senior | 30% discount |
+| Category     | Discount                                 |
+| ------------ | ---------------------------------------- |
+| Regular      | No discount                              |
+| Student      | 20% discount                             |
+| Senior       | 30% discount                             |
 | Evening Fare | 15% discount (One-Trip only, after 7 PM) |
 
 🧮 **Discount Cap:**  
@@ -73,7 +76,9 @@ The system uses a **relational database** (e.g., MySQL or PostgreSQL) to persist
 ## 🧠 Design Patterns Used
 
 ### 🧩 Strategy Pattern – Fare Calculation
+
 Implements dynamic fare calculation logic based on:
+
 - Ticket type (e.g., daily, one-trip)
 - Travel type (city/inter-city)
 - User category (student, senior)
@@ -84,7 +89,9 @@ Implements dynamic fare calculation logic based on:
 ---
 
 ### 🏭 Factory Pattern – Ticket Creation
+
 Uses a factory class to instantiate appropriate ticket objects based on:
+
 - Travel type (city / inter-city)
 - Ticket type (one-trip, daily, weekly, monthly)
 
@@ -93,7 +100,9 @@ Uses a factory class to instantiate appropriate ticket objects based on:
 ---
 
 ### ⚙️ Singleton Pattern – Fare Configuration
+
 The `FareConfig` class:
+
 - Loads fare settings (base fares, discounts) **once** at application startup.
 - Provides a global access point for consistent fare reference across the system.
 - Loads data from **web.xml** or the database.
@@ -112,64 +121,76 @@ The `FareConfig` class:
 ## 🚍 Main Use Cases
 
 ### 1. **User Registration and Login**
+
 - Passengers can sign up and log in.
 - Admins log in through a separate admin interface.
 - Sessions managed with HttpSession.
 
 ### 2. **Search Available Trips**
+
 - Filter by origin, destination, travel type, and date.
 - View trip availability, departure, and arrival times.
 
 ### 3. **Fare Estimation**
+
 - Estimate ticket cost based on trip details, ticket type, user category, and time.
 - Uses the **Strategy Pattern** for dynamic fare logic.
 
 ### 4. **Purchase Ticket**
+
 - Select a trip and ticket type.
 - Apply relevant discounts.
 - Ticket object created via **Factory Pattern**.
 - Purchase stored in the database.
 
 ### 5. **View Purchased Tickets**
+
 - Users can view all past ticket purchases with details (trip, fare, date).
 
 ### 6. **Admin: Manage Trips**
+
 - Add, update, or delete bus trips and schedules.
 
 ### 7. **Admin: Configure Fare Rules**
+
 - Update fare rules and discounts.
 - Changes reflected dynamically via **Singleton FareConfig**.
 
 ### 8. **Admin: View Reports**
+
 - View total tickets sold.
 - Filter by date range, ticket type, or user category.
 - Generate revenue summaries (daily, weekly, monthly).
 
 ### 9. **Logout**
+
 - Ends the user session and returns to login/home page.
 
 ---
 
 ## 💾 Technologies Used
 
-| Category | Technologies |
-|-----------|--------------|
-| Language | Java (JDK 17+) |
-| Framework | Java Servlets, JSP |
-| Database | MySQL / PostgreSQL |
-| Architecture | MVC (Model–View–Controller) |
+| Category        | Technologies                 |
+| --------------- | ---------------------------- |
+| Language        | Java (JDK 17+)               |
+| Framework       | Java Servlets, JSP           |
+| Database        | MySQL / PostgreSQL           |
+| Architecture    | MVC (Model–View–Controller)  |
 | Design Patterns | Strategy, Factory, Singleton |
-| Tools | Apache Tomcat, JDBC |
-| IDE | Eclipse / IntelliJ IDEA |
-| Version Control | Git & GitHub |
+| Tools           | Apache Tomcat, JDBC          |
+| IDE             | Eclipse / IntelliJ IDEA      |
+| Version Control | Git & GitHub                 |
 
 ---
 
 ## ⚙️ Setup & Installation
 
 ### 1️⃣ Clone the Repository
+
 ```bash
 git clone https://github.com/yourusername/OnlineBusTicketingSystem.git
+```
+
 2️⃣ Install MySQL Server
 Download and install MySQL Server from MySQL Downloads.
 
@@ -183,7 +204,7 @@ The MySQL JDBC driver (mysql-connector-j-9.3.0.jar) is already included inside t
 3️⃣ Configure Database Connection
 Update your database credentials in your configuration file (e.g., web.xml or DBConnection.java):
 
-xml
+```xml
 Copy code
 <context-param>
     <param-name>dbURL</param-name>
@@ -197,6 +218,8 @@ Copy code
     <param-name>dbPassword</param-name>
     <param-value>your_password_here</param-value>
 </context-param>
+```
+
 4️⃣ Install Apache Tomcat
 Download Apache Tomcat (version 10.x or later) from Tomcat Downloads.
 
@@ -242,4 +265,3 @@ Deadline: May 24th, 2025
 Technology Stack: Java MVC, JSP, Servlets, MySQL
 
 Design Emphasis: Object-Oriented Programming + Design Patterns
-
