@@ -200,7 +200,7 @@ Create a new database (e.g., bus_ticketing_db).
 Import the provided SQL schema (if available).
 
 🧩 Note:
-The MySQL JDBC driver (mysql-connector-j-9.3.0.jar) is already included inside the project’s /lib folder — you do not need to download it separately.
+The MySQL JDBC driver isn't included. Make sure to create a lib folder inside src/main/webapp/WEB-INF, and put the jar file of the JDBC driver in the that lib folder.
 
 ### 3️⃣ Configure Database Connection
 
